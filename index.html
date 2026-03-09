@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NSS Unit - PPN PG College Parade Kanpur</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Segoe UI;
+        }
+
+        body {
+            background: #f4f4f4;
+        }
+
+        /* HEADER */
+
+        header {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            padding: 18px;
+            text-align: center;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .logo img {
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            background: white;
+            padding: 4px;
+        }
+
+        .college-name {
+            font-size: 24px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .college-name span {
+            display: block;
+            font-size: 14px;
+        }
+
+        .nss-title {
+            font-size: 16px;
+            margin-top: 4px;
+            font-weight: bold;
+            color: #ffd700;
+        }
+
+        /* NAVIGATION */
+
+        nav {
+            background: #2a5298;
+            padding: 12px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 18px;
+            margin: 0 4px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            background: #1e3c72;
+        }
+
+        /* SECTIONS */
+
+        .section {
+            display: none;
+            max-width: 1000px;
+            margin: 25px auto;
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .section.active {
+            display: block;
+        }
+
+        .section-title {
+            text-align: center;
+            color: #1e3c72;
+            margin-bottom: 20px;
+            font-size: 20px;
+            border-bottom: 2px solid #2a5298;
+            padding-bottom: 8px;
+        }
+
+        /* INFO BOX */
+
+        .info-box {
+            background: #eef3ff;
+            padding: 15px;
+            border-radius: 6px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+
+        /* LEADERS */
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .card {
+            background: #f9f9f9;
+            padding: 15px;
+            width: 280px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            font-size: 14px;
+        }
+
+        .card img {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        /* GALLERY */
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .gallery-item {
+            width: 220px;
+            text-align: center;
+            font-size: 13px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-bottom: 6px;
+        }
+
+        /* REPORT */
+
+        .report-box {
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        /* FORM */
+
+        form {
+            max-width: 500px;
+            margin: auto;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        button {
+            background: #1e3c72;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        button:hover {
+            background: #2a5298;
+        }
+
+        footer {
+            background: #1e3c72;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+            font-size: 13px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+        <div class="header-container">
+
+            <div class="logo">
+                <img src="college-logo.png">
+            </div>
+
+            <div class="college-name">
+                PPN PG College
+                <span>Parade, Kanpur</span>
+                <div class="nss-title">National Service Scheme (NSS Unit)</div>
+            </div>
+
+            <div class="logo">
+                <img src="nss-logo.png">
+            </div>
+
+        </div>
+
+    </header>
+
+    <nav>
+
+        <a onclick="showSection('home')">Home</a>
+        <a onclick="showSection('about')">About NSS</a>
+        <a onclick="showSection('gallery')">Gallery</a>
+        <a onclick="showSection('report')">Report</a>
+        <a onclick="showSection('registration')">Registration</a>
+
+    </nav>
+
+    <!-- HOME -->
+
+    <div id="home" class="section active">
+
+        <h2 class="section-title">Welcome to NSS Unit</h2>
+
+        <div class="info-box">
+
+            National Service Scheme (NSS) ek youth development program hai jo Bharat Sarkar ke Ministry of Youth Affairs
+            & Sports ke under chalaya jata hai. Iska main objective students ko samaj seva aur community development ke
+            liye inspire karna hai.
+
+        </div>
+
+        <div class="card-container">
+
+            <div class="card">
+
+                <img src="principal.jpg">
+
+                <h3>Dr. Principal Name</h3>
+
+                <p><b>Principal</b></p>
+
+                <p>College ke pramukh jo NSS activities ko support karte hain.</p>
+
+            </div>
+
+            <div class="card">
+
+                <img src="program-officer.jpg">
+
+                <h3>Program Officer Name</h3>
+
+                <p><b>Program Officer (NSS)</b></p>
+
+                <p>NSS activities aur camps ko organize karte hain.</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ABOUT NSS -->
+
+    <div id="about" class="section">
+
+        <h2 class="section-title">About NSS</h2>
+
+        <div class="info-box">
+
+            <b>NSS History:</b>
+
+            <br><br>
+
+            National Service Scheme ki shuruaat 24 September 1969 ko Mahatma Gandhi ke birth centenary year par hui thi.
+
+            Iska aim students ko samaj seva ke prati jagruk banana hai.
+
+        </div>
+
+        <div class="info-box">
+
+            <b>NSS Benefits:</b>
+
+            <br><br>
+
+            • Personality Development
+
+            <br>
+
+            • Leadership Skill Development
+
+            <br>
+
+            • Social Awareness
+
+            <br>
+
+            • Community Service Experience
+
+            <br>
+
+            • Government Certificate
+
+            <br>
+
+            • Career Opportunities me advantage
+
+        </div>
+
+    </div>
+
+    <!-- GALLERY -->
+
+    <div id="gallery" class="section">
+
+        <h2 class="section-title">NSS Activities Gallery</h2>
+
+        <div class="gallery">
+
+            <div class="gallery-item">
+
+                <img src="gallery1.jpg">
+
+                <p>Swachhta Abhiyan</p>
+
+            </div>
+
+            <div class="gallery-item">
+
+                <img src="gallery2.jpg">
+
+                <p>Tree Plantation</p>
+
+            </div>
+
+            <div class="gallery-item">
+
+                <img src="gallery3.jpg">
+
+                <p>Blood Donation Camp</p>
+
+            </div>
+
+            <div class="gallery-item">
+
+                <img src="gallery4.jpg">
+
+                <p>Village Awareness Program</p>
+
+            </div>
+
+            <div class="gallery-item">
+
+                <img src="gallery5.jpg">
+
+                <p>Health Awareness Camp</p>
+
+            </div>
+
+            <div class="gallery-item">
+
+                <img src="gallery6.jpg">
+
+                <p>NSS Special Camp Activities</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- REPORT -->
+
+    <div id="report" class="section">
+
+        <h2 class="section-title">NSS Activity Reports</h2>
+
+        <div class="report-box" onclick="showSection('camp7')">
+            Seven Days Special Camp
+        </div>
+
+        <div class="report-box" onclick="showSection('oneday')">
+            One Day Camp
+        </div>
+
+        <div class="report-box" onclick="showSection('blood')">
+            Blood Donation Camp
+        </div>
+
+        <div class="report-box" onclick="showSection('tree')">
+            Tree Plantation Drive
+        </div>
+
+        <div class="report-box" onclick="showSection('health')">
+            Health Awareness Program
+        </div>
+
+    </div>
+
+
+    <!-- 7 DAY CAMP PAGE -->
+
+    <div id="camp7" class="section">
+
+        <button onclick="showSection('report')">← Back</button>
+
+        <h2 class="section-title">Seven Days Special Camp</h2>
+
+        <p>Seven days special camp me NSS volunteers ne village development, safai abhiyan aur awareness rally organize
+            ki.</p>
+
+        <div class="gallery">
+
+            <img src="camp1.jpg">
+            <img src="camp2.jpg">
+            <img src="camp3.jpg">
+
+        </div>
+
+    </div>
+
+
+    <!-- ONE DAY CAMP -->
+
+    <div id="oneday" class="section">
+
+        <button onclick="showSection('report')">← Back</button>
+
+        <h2 class="section-title">One Day Camp</h2>
+
+        <p>One day camp me environment awareness aur campus cleaning activities ki gayi.</p>
+
+        <div class="gallery">
+
+            <img src="oneday1.jpg">
+            <img src="oneday2.jpg">
+
+        </div>
+
+    </div>
+
+
+    <!-- BLOOD DONATION CAMP -->
+
+    <div id="blood" class="section">
+
+        <button onclick="showSection('report')">← Back</button>
+
+        <h2 class="section-title">Blood Donation Camp</h2>
+
+        <p>NSS volunteers ne blood donation camp organize kiya aur social service ka message diya.</p>
+
+        <div class="gallery">
+
+            <img src="blood1.jpg">
+            <img src="blood2.jpg">
+
+        </div>
+
+    </div>
+
+
+    <!-- TREE PLANTATION -->
+
+    <div id="tree" class="section">
+
+        <button onclick="showSection('report')">← Back</button>
+
+        <h2 class="section-title">Tree Plantation Drive</h2>
+
+        <p>NSS volunteers ne environment protection ke liye tree plantation drive organize ki.</p>
+
+        <div class="gallery">
+
+            <img src="tree1.jpg">
+            <img src="tree2.jpg">
+
+        </div>
+
+    </div>
+
+
+    <!-- HEALTH PROGRAM -->
+
+    <div id="health" class="section">
+
+        <button onclick="showSection('report')">← Back</button>
+
+        <h2 class="section-title">Health Awareness Program</h2>
+
+        <p>Health awareness program me villagers ko swasthya aur safai ke bare me jagruk kiya gaya.</p>
+
+        <div class="gallery">
+
+            <img src="health1.jpg">
+            <img src="health2.jpg">
+
+        </div>
+
+    </div>
+
+    <!-- REGISTRATION -->
+
+    <div id="registration" class="section">
+
+        <h2 class="section-title">NSS Volunteer Registration</h2>
+
+        <form id="regForm">
+
+            <input type="text" placeholder="Student Name" required>
+
+            <input type="text" placeholder="Father Name" required>
+
+            <input type="text" placeholder="Mother Name" required>
+
+            <input type="date" required>
+
+            <select required>
+
+                <option>Select Gender</option>
+
+                <option>Male</option>
+
+                <option>Female</option>
+
+                <option>Other</option>
+
+            </select>
+
+            <input type="tel" placeholder="Mobile Number" required>
+
+            <input type="email" placeholder="Email">
+
+            <textarea placeholder="Address"></textarea>
+
+            <select>
+
+                <option>BA</option>
+
+                <option>BSc</option>
+
+                <option>BCom</option>
+                <option>BCA</option>
+                <option>BBA</option>
+                <option>B.Ed</option>
+                <option>MA</option>
+                <option>MSc</option>
+
+            </select>
+
+            <select>
+
+                <option>1st Year</option>
+
+                <option>2nd Year</option>
+
+                <option>3rd Year</option>
+
+            </select>
+
+            <input type="file">
+
+            <button type="submit">Register Volunteer</button>
+
+        </form>
+
+        <p id="msg" style="text-align:center;margin-top:10px;color:green;"></p>
+
+    </div>
+
+    <footer>
+
+        <p>© 2026 NSS Unit | PPN PG College Parade Kanpur</p>
+
+    </footer>
+
+    <script>
+
+        function showSection(id) {
+
+            document.querySelectorAll('.section').forEach(sec => {
+
+                sec.classList.remove('active');
+
+            });
+
+            document.getElementById(id).classList.add('active');
+
+        }
+
+        document.getElementById("regForm").addEventListener("submit", function (e) {
+
+            e.preventDefault();
+
+            document.getElementById("msg").innerHTML = "Registration Submitted Successfully!";
+
+        });
+
+    </script>
+
+</body>
+
+</html>
